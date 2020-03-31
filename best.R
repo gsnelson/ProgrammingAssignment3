@@ -34,5 +34,5 @@ best <- function(st_abrev, outcome) {
 	return(best.c[1,])
 }
 
-out <- best("OH", "heart failure")
+out <- best("SC", "heart attack")
 print(out)

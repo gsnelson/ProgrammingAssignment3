@@ -5,8 +5,7 @@ rankhospital <- function(st_abrev, outcome, num = "best") {
 	## Read outcome data
 	ranks <-
 		read.csv("datasets/outcome-of-care-measures.csv", na.strings = "Not Available")
-	print(head(ranks))
-	
+
 	
 	## Check that state and outcome are valid
 	try(if (length(grep(st_abrev, state.abb)) == 0)
@@ -49,5 +48,5 @@ rankhospital <- function(st_abrev, outcome, num = "best") {
 	}
 }
 
-out <- rankhospital("WV", "heart failure", 25)
+out <- rankhospital("NC", "heart attack", "worst")
 print(out)
